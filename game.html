@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>颜色辨异</title>
+    <link rel="stylesheet" href="game.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 开始页面 -->
+        <section class="page start-page active">
+            <h1 class="title">颜色辨异</h1>
+            <div class="instructions">找出所有色块中颜色不同的一个</div>
+            <button class="btn start-btn" data-mode="color">开始游戏</button>
+        </section>
+
+        <!-- 游戏页面 -->
+        <section class="page game-page">
+            <header class="game-header">
+                <div class="status-item">
+                    <span class="label">关卡:</span>
+                    <span class="value level">1</span>
+                </div>
+                <div class="status-item timer">
+                    <span class="value time-left">60</span>
+                </div>
+                <button class="btn pause-btn">暂停</button>
+            </header>
+            <div class="color-grid"></div>
+        </section>
+
+        <!-- 弹窗 -->
+        <div class="overlay">
+            <div class="dialog">
+                <div class="dialog-content game-over">
+                    <h3 class="dialog-title"></h3>
+                    <div class="btn-group">
+                        <button class="btn restart-btn">再来一局</button>
+                    </div>
+                </div>
+                <div class="dialog-content pause-menu">
+                    <h3 class="dialog-title">游戏暂停</h3>
+                    <div class="btn-group">
+                        <button class="btn resume-btn">继续游戏</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="libs.min.js"></script>
+    <script src="game.min.js"></script>
+</body>
+</html>
